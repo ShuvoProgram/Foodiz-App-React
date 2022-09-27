@@ -1,0 +1,28 @@
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.food{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.search{
+    margin: 20px;
+    text-align: center;
+}
+.search input{
+    padding: 10px 100px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 2px solid orangered;
+}
+.search-btn{
+    color: white;
+    background-color: orangered;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}

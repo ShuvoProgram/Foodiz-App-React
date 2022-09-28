@@ -1,19 +1,22 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = (props) => {
-    
+const Cart = ({cart}) => {
     return (
-        <div className='cart'>
-            <h2>Order Now</h2>
-            <h4>Selected items: </h4>
-            <div className="selected-cart">
-                <img src="" alt="" />
-                <span>1</span>
-                <span>Price: $15</span>
-                <button className='cart-delete'>X</button>
+            <div>
+                {
+                cart.map(c => {
+                    const { strMeal, strMealThumb } = c;
+                    return (
+                        <div className="selected-cart">
+                            <img src={strMealThumb} alt="" />
+                            <span>{strMeal}</span>
+                            <button className='cart-delete'>X</button>
+                       </div>
+                    )
+                })
+                }
             </div>
-        </div>
     );
 };
 
